@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Karlotta Freier — Agenzia</title>
+
+  <link rel="icon" href="vettore 2.svg" type="image/svg+xml">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="karlotta">
+
+<header>
+
+  <a href="index.html">
+    <img src="logo/Component 3.svg" alt="logo">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ABOUT</a></li>
+      <li><a href="index.html">ILLUSTRATORS</a></li>
+      <li><a href="index.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main class="karlotta-layout">
+
+  <section class="karlotta-bio">
+
+    <h1>
+      KARLOTTA<br>
+      FREIER
+    </h1>
+
+    <h2>
+      Karlotta Freier is an accomplished Brooklyn-based artist with a strong background in illustration.
+
+      In 2021 she graduated from the MFA Illustration as Visual Essay program at the School of Visual Arts, further developing her distinctive visual storytelling style.
+
+      Alongside her artistic practice, Karlotta is passionate about education and has taught illustration at the China Academy of Art while also speaking as a guest lecturer at universities across the United States.
+
+      Her work has been exhibited internationally through solo exhibitions, group shows and festivals, earning recognition from the Art Directors Club with both a Cube award in 2018 and a Pencil for Best Illustration Portfolio in 2021.
+    </h2>
+
+  </section>
+
+  <section class="karlotta-gallery">
+
+    <div class="foto">
+      <img src="foto karlotta/uno.jpg" alt="">
+    </div>
+
+    <div class="foto">
+      <img src="foto karlotta/due.jpg" alt="">
+    </div>
+
+    <div class="foto">
+      <img src="foto karlotta/tre.jpg" alt="">
+    </div>
+
+    <div class="foto">
+      <img src="foto karlotta/quattro.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- LIGHTBOX -->
+
+  <div class="lightbox">
+
+    <div class="lightbox-content">
+
+      <img src="immagini/close.svg" class="close" alt="close">
+
+      <img class="lightbox-img" src="" alt="">
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer" id="contacts">
+
+  <div class="footer-left">
+
+    <div class="brand">
+      <img src="logo/Component 3.svg" alt="logo" class="logoo">
+    </div>
+
+  </div>
+
+  <div class="footer-right">
+
+    <h3>CONTACT US</h3>
+
+    <p class="site">agenzia.com</p>
+
+    <p class="phone">+24 337 13 24 552</p>
+
+  </div>
+
+</footer>
+
+<script>
+
+const images = document.querySelectorAll(".karlotta-gallery img");
+
+const lightbox = document.querySelector(".lightbox");
+
+const lightboxImg = document.querySelector(".lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+
+
+images.forEach(image => {
+
+  image.addEventListener("click", () => {
+
+    lightbox.classList.add("active");
+
+    lightboxImg.src = image.src;
+
+  });
+
+});
+
+
+closeBtn.addEventListener("click", () => {
+
+  lightbox.classList.remove("active");
+
+});
+
+</script>
+
+</body>
+</html>

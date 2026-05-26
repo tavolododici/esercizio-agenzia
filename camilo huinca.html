@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Camilo Huinca — Agenzia</title>
+
+  <link rel="icon" href="vettore 2.svg" type="image/svg+xml">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="camilo">
+
+<header>
+
+  <a href="index.html">
+    <img src="logo/Component 3.svg" alt="logo">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ABOUT</a></li>
+      <li><a href="index.html">ILLUSTRATORS</a></li>
+      <li><a href="index.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main class="camilo-layout">
+
+  <section class="camilo-bio">
+
+    <h1>
+      CAMILO<br>
+      HUINCA
+    </h1>
+
+    <h2>
+      Camilo Huinca's work is rich with colour, content and a brightly illustrated narrative that speaks for itself. Born and raised in Santiago in Chile, Camilo has divided his career between graphic design and painting.
+
+      Working independently has allowed Camilo to develop his own style, having a main focus on the use of curiosity. In 2014 Camilo set up Perfe Studio where he concentrates on graphic design projects in a more commercial way.
+
+      Within illustration, his main motivation is to generate a communication method based on simplicity and synthesis, using few tools and colours. He is interested in portraying people’s behaviour, intimate moments, body gestures and scenic everyday situations through bold and psychedelic compositions.
+
+      Camilo’s work combines expressive storytelling with vibrant colours and reduced details, reproducing real moments from an innocent and impartial perspective.
+    </h2>
+
+  </section>
+
+  <section class="camilo-gallery">
+
+    <div class="foto">
+      <img src="foto camilo/uno.jpg" alt="">
+    </div>
+
+    <div class="foto">
+      <img src="foto camilo/due.jpg" alt="">
+    </div>
+
+    <div class="foto">
+      <img src="foto camilo/tre.jpg" alt="">
+    </div>
+
+    <div class="foto">
+      <img src="foto camilo/quattro.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- LIGHTBOX -->
+
+  <div class="lightbox">
+
+    <div class="lightbox-content">
+
+      <img src="immagini/close.svg" class="close" alt="close">
+
+      <img class="lightbox-img" src="" alt="">
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer" id="contacts">
+
+  <div class="footer-left">
+
+    <div class="brand">
+      <img src="logo/Component 3.svg" alt="logo" class="logoo">
+    </div>
+
+  </div>
+
+  <div class="footer-right">
+
+    <h3>CONTACT US</h3>
+
+    <p class="site">agenzia.com</p>
+
+    <p class="phone">+24 337 13 24 552</p>
+
+  </div>
+
+</footer>
+
+<script>
+
+const images = document.querySelectorAll(".camilo-gallery img");
+
+const lightbox = document.querySelector(".lightbox");
+
+const lightboxImg = document.querySelector(".lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+
+
+images.forEach(image => {
+
+  image.addEventListener("click", () => {
+
+    lightbox.classList.add("active");
+
+    lightboxImg.src = image.src;
+
+  });
+
+});
+
+
+closeBtn.addEventListener("click", () => {
+
+  lightbox.classList.remove("active");
+
+});
+
+</script>
+
+</body>
+</html>

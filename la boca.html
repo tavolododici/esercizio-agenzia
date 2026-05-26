@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>La Boca — Agenzia</title>
+
+  <link rel="icon" href="vettore 2.svg" type="image/svg+xml">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="laboca">
+
+<header>
+
+  <a href="index.html">
+    <img src="logo/Component 3.svg" alt="logo">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ABOUT</a></li>
+      <li><a href="index.html">ILLUSTRATORS</a></li>
+      <li><a href="index.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main class="laboca-layout">
+
+  <section class="laboca-bio">
+    <h1>LA<br>BOCA</h1>
+
+    <h2>
+      La Boca have the rare, impressive ability to create designs and artwork
+      resembling some of the best album sleeves lurking in your dad’s record
+      collection.
+
+      Founded in 2002, the studio is based in west London and has gathered an
+      impressive collection of awards, including Cannes Lions, European Design
+      Awards and the AOI Illustration Awards.
+
+      Their exquisitely executed psychedelic style is the result of each studio
+      member’s unique influences, with the team coming from London, Bordeaux,
+      Devon and Switzerland.
+
+      Working collaboratively across their studios in London and Amsterdam,
+      La Boca create retina-teasing, tactile and occasionally slightly wonky
+      visual worlds.
+    </h2>
+  </section>
+
+  <section class="laboca-gallery">
+    <div class="foto"><img src="foto laboca/uno.jpg" alt=""></div>
+    <div class="foto"><img src="foto laboca/due.jpg" alt=""></div>
+    <div class="foto"><img src="foto laboca/tre.jpg" alt=""></div>
+    <div class="foto"><img src="foto laboca/quattro.jpg" alt=""></div>
+  </section>
+
+  <div class="lightbox">
+    <div class="lightbox-content">
+      <img src="immagini/close.svg" class="close" alt="chiudi">
+      <img class="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="footer-left">
+    <div class="brand">
+      <img src="logo/Component 3.svg" alt="logo" class="logoo">
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <h3>CONTACT US</h3>
+    <p class="site">agenzia.com</p>
+    <p class="phone">+24 337 13 24 552</p>
+  </div>
+</footer>
+
+<script>
+const images = document.querySelectorAll(".laboca-gallery img");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(image => {
+  image.addEventListener("click", () => {
+    lightbox.classList.add("active");
+    lightboxImg.src = image.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+</script>
+
+</body>
+</html>
